@@ -1,5 +1,5 @@
 {
   "pip": [
-    "http://130.211.254.241:8081/kafka/dcos-kafka-0.2.0.tar.gz"
+    "https://storage.googleapis.com/linkerdcos/linker-universe/kafka/dcos-kafka-0.2.0.tar.gz"
   ]
 }

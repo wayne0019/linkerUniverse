@@ -1,9 +1,9 @@
 {
   "assets": {
     "uris": {
-      "jre-7u79-openjdk-tgz": "http://130.211.254.241:8081/kafka/jre-7u79-openjdk.tgz",
-      "kafka_2-10-0-8-2-1-tgz": "http://130.211.254.241:8081/kafka/kafka_2.10-0.8.2.1.tgz",
-      "kafka-mesos-0-9-2-0-jar": "http://130.211.254.241:8081/kafka/kafka-mesos-0.9.2.0.jar"
+      "jre-7u79-openjdk-tgz": "https://storage.googleapis.com/linkerdcos/linker-universe/kafka/jre-7u79-openjdk.tgz",
+      "kafka_2-10-0-8-2-1-tgz": "https://storage.googleapis.com/linkerdcos/linker-universe/kafka/kafka_2.10-0.8.2.1.tgz",
+      "kafka-mesos-0-9-2-0-jar": "https://storage.googleapis.com/linkerdcos/linker-universe/kafka/kafka-mesos-0.9.2.0.jar"
     }
   },
   "images": {
