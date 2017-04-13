@@ -1,0 +1,21 @@
+{
+  "id": "{{linker-utilization.name}}",
+  "instances": {{linker-utilization.instances}},
+  "cpus": {{linker-utilization.cpus}},
+  "mem": {{linker-utilization.mem}},
+  "cmd": "{{linker-utilization.command}}",
+  "maintainer": "support@linkernetwork.com",
+  "constraints": [["hostname", "UNIQUE"]],
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "{{resource.assets.container.docker.linker-utilization-docker}}",
+      "network": "HOST",
+      "privileged": true
+    }
+  },
+  "requirePorts": true,
+  {{#linker-utilization.template-url}}
+  "uris": [ "{{linker-utilization.template-url}}" ],
+  {{/linker-utilization.template-url}}
+}

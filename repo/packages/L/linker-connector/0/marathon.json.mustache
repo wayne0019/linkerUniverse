@@ -1,0 +1,52 @@
+{
+  "id": "{{linker-connector.name}}",
+  "instances": {{linker-connector.instances}},
+  "cpus": {{linker-connector.cpus}},
+  "mem": {{linker-connector.mem}},
+  "cmd": "{{linker-connector.command}}",
+  "maintainer": "support@linkernetwork.com",
+  "constraints": [["hostname", "UNIQUE"]],
+  "labels": {
+    "function": "{{linker-connector.labels-function}}"
+  },
+  "container": {
+    "type": "DOCKER",
+     "volumes": [
+      {
+        "containerPath": "/linker/proc",
+        "hostPath": "/proc",
+        "mode": "RO"
+      },
+      {
+        "containerPath": "/dev",
+        "hostPath": "/dev",
+        "mode": "RO"
+      },
+      {
+        "containerPath": "/var/run/docker.sock",
+        "hostPath": "/var/run/docker.sock",
+        "mode": "RO"
+      },
+      {
+        "containerPath": "/linker/sys",
+        "hostPath": "/sys",
+        "mode": "RO"
+      }
+    ],
+    "docker": {
+      "image": "{{resource.assets.container.docker.linker-connector-docker}}",
+      "network": "HOST",
+      "parameters": [
+       {
+         "key": "pid",
+         "value": "host"
+       }
+    ],
+      "privileged": true
+    }
+  },
+  "requirePorts": true,
+  {{#linker-connector.template-url}}
+  "uris": [ "{{linker-connector.template-url}}" ],
+  {{/linker-connector.template-url}}
+}

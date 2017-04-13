@@ -1,0 +1,55 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "properties": {
+    "linker-cmiserver": {
+      "properties": {
+        "cpus": {
+          "default": 0.5,
+          "description": "CPU shares to allocate to each linker-cmiserver instance.",
+          "minimum": 0.1,
+          "type": "number"
+        },
+        "command": {
+          "default": "/cmi_server/start_server.sh",
+          "description": "The command that will execute to start cmiserver.",
+          "type": "string"
+        },
+        "instances": {
+          "default": 1,
+          "description": "Number of instances to run.",
+          "minimum": 1,
+          "type": "integer"
+        },
+        "serviceport": {
+          "default": 10300,
+          "description": "Port number to be used for cmiserver's service port.",
+          "type": "number"
+        },
+        "mem": {
+          "default": 1024,
+          "description": "Memory (MB) to allocate to each linker-cmiserver task.",
+          "minimum": 512,
+          "type": "number"
+        },
+        "name": {
+          "default": "/linker/linker-cmiserver",
+          "description": "The CMI server that will provide cluster resource's trend usage.",
+          "type": "string"
+        },
+        "haproxy-group": {
+          "default": "linkermgmt",
+          "description": "HAProxy group parameter. Matches with HAPROXY_GROUP in the app labels.",
+          "type": "string"
+        },
+        "template-url": {
+          "default": "",
+          "description": "URL to tarball containing a directory templates/ to customize linker-cmiserver config.",
+          "type": "string"
+        }
+      },
+      "required": ["cpus", "mem", "instances", "command"],
+      "type": "object"
+    }
+  },
+  "type": "object"
+}

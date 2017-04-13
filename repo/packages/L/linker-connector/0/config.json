@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "properties": {
+    "linker-connector": {
+      "properties": {
+        "cpus": {
+          "default": 0.1,
+          "description": "CPU shares to allocate to each linker-connector instance.",
+          "minimum": 0.01,
+          "type": "number"
+        },
+        "labels-function": {
+          "default": "mertics-collect",
+          "description": "Labels value of function item.",
+          "type": "string"
+        },
+        "command": {
+          "default": "/linkerConnector proc -r /linker/proc -q /linker/sys -i 2000 -d kafka -t mic-test -s 127.0.0.1:1025 -c http://localhost:10000 -f false",
+          "description": "The command that will execute.",
+          "type": "string"
+        },
+        "instances": {
+          "default": 1,
+          "description": "Number of instances to run.",
+          "minimum": 1,
+          "type": "integer"
+        },
+        "mem": {
+          "default": 64.0,
+          "description": "Memory (MB) to allocate to each linker-connector task.",
+          "minimum": 32.0,
+          "type": "number"
+        },
+        "name": {
+          "default": "/linker/linker-connector",
+          "description": "Collect node's basic running info(cpu,mem and so on) and send them to kafka",
+          "type": "string"
+        },
+        "template-url": {
+          "default": "",
+          "description": "URL to tarball containing a directory templates/ to customize linker-connector config.",
+          "type": "string"
+        }
+      },
+      "required": ["cpus", "mem", "instances", "name"],
+      "type": "object"
+    }
+  },
+  "type": "object"
+}

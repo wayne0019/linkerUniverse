@@ -1,0 +1,17 @@
+{
+  "packagingVersion": "2.0",
+  "name": "linker-utilization",
+  "version": "2.1.0",
+  "description": "The long run process to trend machine's cpu, mem and disk usage",
+  "maintainer": "support@linkernetworks.com",
+  "tags": ["trend", "cpu","mem","disk"],
+  "preInstallNotes": "We recommend at least 0.1 CPUs and 512MB of RAM for each linker-utilization instance.",
+  "postInstallNotes": "Linker-utilization LinkerDC/OS Service has been successfully installed!\n",
+  "postUninstallNotes": "Linker-utilization LinkerDC/OS Service has been uninstalled and will no longer run.",
+  "licenses": [
+    {
+      "name": "Apache License Version 2.0",
+      "url": "https://github.com/mesosphere/marathon/blob/master/LICENSE"
+    }
+  ]
+}

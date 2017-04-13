@@ -1,0 +1,31 @@
+{
+  "id": "{{linker-cmiserver.name}}",
+  "instances": {{linker-cmiserver.instances}},
+  "cpus": {{linker-cmiserver.cpus}},
+  "mem": {{linker-cmiserver.mem}},
+  "cmd": "{{linker-cmiserver.command}}",
+  "maintainer": "support@linkernetwork.com",
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "{{resource.assets.container.docker.linker-cmiserver-docker}}",
+       "portMappings": [
+        {
+          "containerPort": {{linker-cmiserver.serviceport}},
+          "hostPort": 0,
+          "servicePort": {{linker-cmiserver.serviceport}},
+          "protocol": "tcp",
+          "labels": {}
+        }
+      ],
+      "network": "BRIDGE",
+      "privileged": true
+    }
+  },
+  "labels": {
+    "HAPROXY_GROUP": "{{linker-cmiserver.haproxy-group}}"
+  },
+  {{#linker-cmiserver.template-url}}
+  "uris": [ "{{linker-cmiserver.template-url}}" ],
+  {{/linker-cmiserver.template-url}}
+}

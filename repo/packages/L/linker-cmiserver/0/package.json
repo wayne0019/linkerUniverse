@@ -1,0 +1,17 @@
+{
+  "packagingVersion": "2.0",
+  "name": "linker-cmiserver",
+  "version": "2.1.0",
+  "description": "The CMI server that will provide cluster resource's trend usage",
+  "maintainer": "support@linkernetworks.com",
+  "tags": ["trend", "CMI","REST"],
+  "preInstallNotes": "We recommend at least 0.5 CPUs and 1024MB of RAM for each linker-cmiserver instance.",
+  "postInstallNotes": "linker-cmiserver LinkerDC/OS Service has been successfully installed!\n",
+  "postUninstallNotes": "linker-cmiserver LinkerDC/OS Service has been uninstalled and will no longer run.",
+  "licenses": [
+    {
+      "name": "Apache License Version 2.0",
+      "url": "https://github.com/mesosphere/marathon/blob/master/LICENSE"
+    }
+  ]
+}
