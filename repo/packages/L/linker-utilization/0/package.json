@@ -8,6 +8,7 @@
   "preInstallNotes": "We recommend at least 0.1 CPUs and 512MB of RAM for each linker-utilization instance.",
   "postInstallNotes": "Linker-utilization LinkerDC/OS Service has been successfully installed!\n",
   "postUninstallNotes": "Linker-utilization LinkerDC/OS Service has been uninstalled and will no longer run.",
+  "selected" : true,
   "licenses": [
     {
       "name": "Apache License Version 2.0",

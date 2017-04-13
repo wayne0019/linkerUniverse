@@ -8,6 +8,7 @@
   "preInstallNotes": "We recommend at least 0.5 CPUs and 1024MB of RAM for each linker-cmiserver instance.",
   "postInstallNotes": "linker-cmiserver LinkerDC/OS Service has been successfully installed!\n",
   "postUninstallNotes": "linker-cmiserver LinkerDC/OS Service has been uninstalled and will no longer run.",
+  "selected" : true,
   "licenses": [
     {
       "name": "Apache License Version 2.0",
