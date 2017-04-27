@@ -36,6 +36,11 @@
           "description": "The CMI server that will provide cluster resource's trend usage.",
           "type": "string"
         },
+        "cassandraips": {
+          "default": "",
+          "description": "The cassandra ip list that will be used. Seperated by comma",
+          "type": "string"
+        },
         "haproxy-group": {
           "default": "linkermgmt",
           "description": "HAProxy group parameter. Matches with HAPROXY_GROUP in the app labels.",

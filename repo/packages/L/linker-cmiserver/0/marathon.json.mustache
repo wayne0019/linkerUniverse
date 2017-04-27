@@ -25,7 +25,12 @@
   "labels": {
     "HAPROXY_GROUP": "{{linker-cmiserver.haproxy-group}}"
   },
+  "env": {
+   {{#linker-cmiserver.cassandraips}}
+    "CASSANDRA_IPS": "{{linker-cmiserver.cassandraips}}"
+   {{/linker-cmiserver.cassandraips}}
+  },
   {{#linker-cmiserver.template-url}}
-  "uris": [ "{{linker-cmiserver.template-url}}" ],
+  "uris": [ "{{linker-cmiserver.template-url}}" ]
   {{/linker-cmiserver.template-url}}
 }
