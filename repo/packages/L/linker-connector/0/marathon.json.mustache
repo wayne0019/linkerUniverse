@@ -46,7 +46,9 @@
     }
   },
   "requirePorts": true,
-  {{#linker-connector.template-url}}
-  "uris": [ "{{linker-connector.template-url}}" ]
-  {{/linker-connector.template-url}}
+  "uris": [
+       {{#linker-connector.template-url}}
+        "{{linker-connector.template-url}}"
+       {{/linker-connector.template-url}}
+   ]
 }

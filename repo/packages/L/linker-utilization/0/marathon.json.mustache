@@ -20,7 +20,9 @@
    {{/linker-utilization.cassandraips}}
   },
   "requirePorts": true,
-  {{#linker-utilization.template-url}}
-  "uris": [ "{{linker-utilization.template-url}}" ]
-  {{/linker-utilization.template-url}}
+  "uris": [
+     {{#linker-utilization.template-url}}
+      "{{linker-utilization.template-url}}"
+     {{/linker-utilization.template-url}} 
+    ]
 }
