@@ -47,6 +47,12 @@
     }
   },
   "requirePorts": true,
+  "env": {
+   {{#linker-connector.kafka-endpoint}}
+    "KAFKA_ENDPOINT": "{{linker-connector.kafka-endpoint}}",
+   {{/linker-connector.kafka-endpoint}}
+    "KAFKA_TOPIC": "{{linker-connector.kafka-topic}}"
+  },
   "uris": [
        {{#linker-connector.template-url}}
         "{{linker-connector.template-url}}"

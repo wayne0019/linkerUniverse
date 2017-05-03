@@ -14,8 +14,18 @@
           "description": "Labels value of function item.",
           "type": "string"
         },
+        "kafka-endpoint": {
+          "default": "",
+          "description": "The endpoint of kafka broker.",
+          "type": "string"
+        },
+        "kafka-topic": {
+          "default": "mic-test",
+          "description": "The kafka topic to be used.",
+          "type": "string"
+        },
         "command": {
-          "default": "/linkerConnector proc -r /linker/proc -q /linker/sys -i 2000 -d kafka -t mic-test -s 127.0.0.1:1025 -c http://localhost:10000 -f false",
+          "default": "/start.sh",
           "description": "The command that will execute.",
           "type": "string"
         },
@@ -42,7 +52,7 @@
           "type": "string"
         }
       },
-      "required": ["cpus", "mem", "instances", "name"],
+      "required": ["cpus", "mem", "instances", "name", "kafka-endpoint"],
       "type": "object"
     }
   },
