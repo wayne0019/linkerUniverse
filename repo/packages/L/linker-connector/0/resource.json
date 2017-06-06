@@ -7,7 +7,7 @@
   "assets": {
     "container": {
       "docker": {
-        "linker-connector-docker": "linkerrepository/linker_connector:stable-v2"
+        "linker-connector-docker": "linkerrepository/linker_connector:stable-v3"
       }
     }
   }
