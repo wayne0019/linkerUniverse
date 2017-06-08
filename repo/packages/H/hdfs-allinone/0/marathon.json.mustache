@@ -4,11 +4,11 @@
   "cpus": {{service.cpus}},
   "mem": {{service.mem}},
   "maintainer": "support@linkernetwork.com",
-  "constraints": [[
+  "constraints": [
     {{#service.nodeip}}
-    "hostname", "CLUSTER","{{service.nodeip}}"
+    ["hostname", "CLUSTER","{{service.nodeip}}"]
     {{/service.nodeip}}
-   ]],
+   ],
   "container": {
     "type": "DOCKER",
     "volumes": [{
@@ -30,9 +30,9 @@
     "DCOS_PACKAGE_IS_FRAMEWORK": "false"
   },
   "env": {
-   {{#service.hdfs_url}}
-    "HDFSURL": "{{service.hdfs_url}}"
-   {{/service.hdfs_url}}
+   {{#service.nodeip}}
+    "HDFSURL": "{{service.nodeip}}"
+   {{/service.nodeip}}
   }
 }
 

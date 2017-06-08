@@ -26,18 +26,13 @@
           "description": "The long run process to trend machine's cpu, mem and disk usage.",
           "type": "string"
         },
-        "hdfs_url": {
-          "default": "",
-          "description": "hdfs url that will be used during hdfs start and configuraion.",
-          "type": "string"
-        },
         "nodeip": {
           "default": "",
           "description": "The ip address where the hdfs service will be deployed.",
           "type": "string"
         }
       },
-      "required": ["cpus", "mem", "instances", "hdfs_url"],
+      "required": ["cpus", "mem", "instances", "nodeip"],
       "type": "object"
     },
     "storage": {
