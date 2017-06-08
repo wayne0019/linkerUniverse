@@ -1,0 +1,38 @@
+{
+  "id": "{{service.name}}",
+  "instances": {{service.instances}},
+  "cpus": {{service.cpus}},
+  "mem": {{service.mem}},
+  "maintainer": "support@linkernetwork.com",
+  "constraints": [[
+    {{#service.nodeip}}
+    "hostname", "CLUSTER","{{service.nodeip}}"
+    {{/service.nodeip}}
+   ]],
+  "container": {
+    "type": "DOCKER",
+    "volumes": [{
+      {{#storage.host_volume}}
+      "hostPath": "{{storage.host_volume}}",
+      {{/storage.host_volume}}
+      {{#storage.container_volume}}
+      "containerPath": "{{storage.container_volume}}",
+      {{/storage.container_volume}}
+      "mode": "RW"
+    }],
+    "docker": {
+      "image": "{{resource.assets.container.docker.service-docker}}",
+      "network": "HOST",
+      "privileged": true
+    }
+  },
+  "labels": {
+    "DCOS_PACKAGE_IS_FRAMEWORK": "false"
+  },
+  "env": {
+   {{#service.hdfs_url}}
+    "HDFSURL": "{{service.hdfs_url}}"
+   {{/service.hdfs_url}}
+  }
+}
+

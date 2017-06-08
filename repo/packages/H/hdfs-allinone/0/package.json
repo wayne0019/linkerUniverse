@@ -1,0 +1,19 @@
+{
+  "packagingVersion": "2.0",
+  "name": "hdfs-allinone",
+  "version": "2.1.0",
+  "description": "The all-in-one hdfs service",
+  "maintainer": "support@linkernetworks.com",
+  "tags": ["hdfs","linker"],
+  "preInstallNotes": "We recommend at least 0.5 CPUs and 1024MB of RAM for each hdfs instance.",
+  "postInstallNotes": "All-in-one hdfs Service has been successfully installed!\n",
+  "postUninstallNotes": "All-in-one hdfs Service has been uninstalled and will no longer run.",
+  "selected" : true,
+  "licenses": [
+    {
+      "name": "Apache License Version 2.0",
+      "url": "https://github.com/mesosphere/marathon/blob/master/LICENSE"
+    }
+  ]
+}
+
