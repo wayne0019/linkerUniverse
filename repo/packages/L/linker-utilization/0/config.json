@@ -10,7 +10,7 @@
           "type": "number"
         },
         "command": {
-          "default": "cd /utilization_maximization/code/ && bash ./keras_pred_tmp.sh",
+          "default": "bash ./keras_pred_tmp.sh",
           "description": "The command that will execute.",
           "type": "string"
         },
