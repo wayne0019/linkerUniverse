@@ -105,9 +105,7 @@
             "required": [
                 "app",
                 "zk", "api", "storage", "jre",
-                "framework-name", "framework-role",
-                "user", "principal", "secret",
-                "other-options"
+                "framework-name", "framework-role"
             ]
         }
     }
